@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'welcome#index'
 
-  namespace :api do
+  namespace :api, format: :json do
     namespace :v1 do
-      resources :matches
+      resources :users
     end
   end
 end
